@@ -4,7 +4,7 @@ This is a personal project of mine that is an extention of a project I did for a
 
 
 ###First Iteration
-It's a weighted bigrams model. Nothing fancy. Word lengths are randomly selected from 1-9, and it generates blocks of 200 words. 
+It's a weighted bigrams model. Nothing fancy. Word lengths are randomly selected from 1-9, and it generates blocks of 200 words. Tested with 15% of words being actual english words.
 
 ###Second Iteration
 Added in a weighted length-choosing function. Now we won't get one-letter-words following one-letter words.
