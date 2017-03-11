@@ -2,7 +2,7 @@
 import string
 import pandas as pd
 
-def find_ngrams(filepath, n):
+def find_ngrams(filepath, output, n):
     """ Finds all n-grams in a text sample and returns the probability matrix
     for that text sample. Also returns an n-gram dictionary, which tells you
     how often each n-gram occurs in the text."""
@@ -44,9 +44,9 @@ def find_ngrams(filepath, n):
     #normalize across all columns to get probabilities
     prob_mat[cols] = prob_mat[cols].div(prob_mat[cols].sum(axis=1), axis=1)
 
-    prob_mat.to_csv('hawaiian.csv')
+    #prob_mat.to_csv(output)
 
     return ngram_dict, row_col, prob_mat #returns everything as a tuple
 
 if __name__ == "__main__":
-    print find_ngrams("Hawaiian_Train.txt", 2)
+    print (find_ngrams("Hawaiian_Train.txt", "hawaiian.csv", 2))
